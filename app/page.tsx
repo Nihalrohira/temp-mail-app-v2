@@ -297,17 +297,13 @@ export default function HomePage() {
       <div className="flex justify-center">
         {/* LEFT AD */}
         <div className="hidden lg:flex w-[160px] justify-center pt-20">
-          <div className="sticky top-20 w-[160px] h-[600px] rounded-xl border border-border bg-muted/30 flex items-center justify-center text-xs text-muted-foreground">
-            Advertisement
-          </div>
+          <div className="ad-slot ad-left sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
         </div>
 
         {/* MAIN CONTENT */}
         <main className="w-full max-w-5xl px-4 py-8">
         <div className="mb-6 flex justify-center">
-          <div className="w-full max-w-5xl h-[70px] rounded-md border border-border bg-muted/30 flex items-center justify-center text-xs text-muted-foreground">
-            Advertisement
-          </div>
+          <div className="ad-slot ad-top h-[70px] w-full max-w-5xl rounded-md border border-border bg-muted/30" />
         </div>
         {/* Hero Section */}
         {!email && (
@@ -431,9 +427,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <div className="w-full max-w-5xl h-[90px] rounded-xl border border-border bg-muted/30 flex items-center justify-center text-xs text-muted-foreground">
-            Advertisement
-          </div>
+          <div className="ad-slot ad-middle h-[90px] w-full max-w-5xl rounded-xl border border-border bg-muted/30" />
         </div>
 
         {/* Inbox Section */}
@@ -478,9 +472,7 @@ export default function HomePage() {
 
         {/* RIGHT AD */}
         <div className="hidden lg:flex w-[160px] justify-center pt-20">
-          <div className="sticky top-20 w-[160px] h-[600px] rounded-xl border border-border bg-muted/30 flex items-center justify-center text-xs text-muted-foreground">
-            Advertisement
-          </div>
+          <div className="ad-slot ad-right sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
         </div>
       </div>
 
