@@ -1,0 +1,10 @@
+# Deploy from this folder: npx wrangler deploy
+# Replace KV id with your namespace id from the Cloudflare dashboard.
+
+name = "tempmail-api"
+main = "index.ts"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "EMAILS"
+id = "658806ef9d1246379b2df52728732c79"
