@@ -173,6 +173,7 @@ ${email.body || ""}
 
             {/* DELETE BUTTON */}
             <Button
+              data-testid="delete-email-btn"
               variant="ghost"
               size="icon"
               className="h-9 w-9"

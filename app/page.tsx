@@ -356,15 +356,14 @@ export default function HomePage() {
               Your temporary email
             </label>
             <div className="flex items-center gap-2">
-              <div className="flex-1 rounded-lg border border-border bg-secondary/50 px-4 py-3 font-mono text-lg">
-                {email ? (
-                  <span className="text-foreground">{email}</span>
-                ) : (
-                  <span className="text-muted-foreground">
-                    Click generate to create your email
-                  </span>
-                )}
-              </div>
+              <input
+                type="text"
+                className="flex-1 rounded-lg border border-border bg-secondary/50 px-4 py-3 font-mono text-lg"
+                data-testid="email-input"
+                value={email ?? ""}
+                readOnly
+                placeholder="Click generate to create your email"
+              />
               <Button
                 variant="outline"
                 size="icon"
@@ -387,6 +386,7 @@ export default function HomePage() {
               onClick={handleGenerateEmail}
               disabled={isGenerating}
               className="gap-2"
+              data-testid="generate-email-btn"
             >
               {isGenerating ? (
                 <RefreshCw className="h-4 w-4 animate-spin" />
@@ -432,7 +432,7 @@ export default function HomePage() {
 
         {/* Inbox Section */}
         {email && (
-          <div className="mt-6 rounded-xl border border-border bg-card p-4">
+          <div data-testid="inbox-section" className="mt-6 rounded-xl border border-border bg-card p-4">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold">Inbox</h2>
               <span className="text-sm text-muted-foreground">
