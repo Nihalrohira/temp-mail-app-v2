@@ -297,13 +297,13 @@ export default function HomePage() {
       <div className="flex justify-center">
         {/* LEFT AD */}
         <div className="hidden lg:flex w-[160px] justify-center pt-20">
-          <div className="ad-slot ad-left sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
+          <div className="ad-container side-left sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
         </div>
 
         {/* MAIN CONTENT */}
         <main className="w-full max-w-5xl px-4 py-8">
         <div className="mb-6 flex justify-center">
-          <div className="ad-slot ad-top h-[70px] w-full max-w-5xl rounded-md border border-border bg-muted/30" />
+          <div className="ad-container banner-top h-[70px] w-full max-w-5xl rounded-md border border-border bg-muted/30" />
         </div>
         {/* Hero Section */}
         {!email && (
@@ -427,7 +427,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <div className="ad-slot ad-middle h-[90px] w-full max-w-5xl rounded-xl border border-border bg-muted/30" />
+          <div className="ad-container banner-middle h-[90px] w-full max-w-5xl rounded-xl border border-border bg-muted/30" />
         </div>
 
         {/* Inbox Section */}
@@ -472,7 +472,7 @@ export default function HomePage() {
 
         {/* RIGHT AD */}
         <div className="hidden lg:flex w-[160px] justify-center pt-20">
-          <div className="ad-slot ad-right sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
+          <div className="ad-container side-right sticky top-20 h-[600px] w-[160px] shrink-0 rounded-xl border border-border bg-muted/30" />
         </div>
       </div>
 
