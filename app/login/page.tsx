@@ -22,7 +22,9 @@ export default function LoginPage() {
     // Simulate Google OAuth
     await new Promise((resolve) => setTimeout(resolve, 1500))
     setIsGoogleLoading(false)
-    document.cookie = `admin_email=${encodeURIComponent("rohiranihal8@gmail.com")};path=/;max-age=${60 * 60 * 24 * 7};SameSite=Lax`
+    if (typeof window !== "undefined") {
+      document.cookie = `admin_email=${encodeURIComponent("rohiranihal8@gmail.com")};path=/;max-age=${60 * 60 * 24 * 7};SameSite=Lax`
+    }
     router.push("/admin")
   }, [router])
 

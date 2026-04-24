@@ -54,14 +54,16 @@ export default function HomePage() {
     const next = new Set(deletedIdsRef.current).add(id)
     deletedIdsRef.current = next
     setDeletedIds(next)
-    window.setTimeout(() => {
-      setDeletedIds((prev) => {
-        const next = new Set(prev)
-        next.delete(id)
-        deletedIdsRef.current = next
-        return next
-      })
-    }, 10000)
+    if (typeof window !== "undefined") {
+      window.setTimeout(() => {
+        setDeletedIds((prev) => {
+          const next = new Set(prev)
+          next.delete(id)
+          deletedIdsRef.current = next
+          return next
+        })
+      }, 10000)
+    }
   }, [])
 
   // Derive visible inbox: SSE/API only touch rawEmails; tombstones applied here.
