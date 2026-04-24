@@ -1,5 +1,7 @@
 import AppHeader from "@/components/AppHeader"
 
+export const dynamic = "force-dynamic"
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
