@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('generate email and verify UI works', async ({ page }) => {
-await page.goto('/');
+await page.goto('http://127.0.0.1:3000');
 
 // Click generate email
 await page.click('text=Generate New');
