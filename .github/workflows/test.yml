@@ -26,12 +26,10 @@ jobs:
         run: npm run build
 
       - name: Start app
-        run: |
-          npm run start &
-          sleep 5
+        run: npx serve -s out -l 3000 &
 
       - name: Wait for app to be ready
-        run: npx wait-on http://127.0.0.1:3000
+        run: npx wait-on http://127.0.0.1:3000 --timeout 60000
 
       - name: Run tests
         run: npx playwright test
