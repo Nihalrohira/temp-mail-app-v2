@@ -4,7 +4,7 @@ test('generate email and verify UI works', async ({ page }) => {
 await page.goto('http://127.0.0.1:3000');
 
 // Click generate email
-await page.click('text=Generate New');
+await page.click('[data-testid="generate-email-btn"]');
 
 // Get generated email value
 const emailInput = page.locator('input');
