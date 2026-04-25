@@ -30,8 +30,8 @@ jobs:
 
       - name: Start app
         run: |
-          npm run start &
-          sleep 5
+          PORT=3000 npm run start &
+          npx wait-on http://localhost:3000 --timeout 60000
 
       - name: Wait for app to be ready
         run: npx wait-on http://127.0.0.1:3000 --timeout 60000
