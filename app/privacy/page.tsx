@@ -2,8 +2,6 @@ import Link from "next/link"
 import { Mail, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export const dynamic = "force-dynamic"
-
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background">

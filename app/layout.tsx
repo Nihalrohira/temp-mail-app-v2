@@ -4,10 +4,6 @@ import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
-export const dynamic = "force-dynamic"
-
-export const runtime = 'edge'
-
 const fontSans = Inter({ subsets: ['latin'], variable: '--font-geist-sans' })
 const fontMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
